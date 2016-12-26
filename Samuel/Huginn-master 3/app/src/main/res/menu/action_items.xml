@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/atn_direct_enable"
+        android:icon="@drawable/ic_action_on_off"
+        android:title="@string/enable_p2p_button"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/atn_direct_discover"
+        android:icon="@drawable/ic_action_discover"
+        android:title="@string/discover_peers_button"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/be_server"
+        android:icon="@drawable/ic_flight_takeoff_white_24dp"
+        android:title="@string/be_server"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/simulator"
+        android:icon="@drawable/ic_flight_takeoff_white_24dp"
+        android:title="@string/open_simulator"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/huggin"
+        android:icon="@drawable/ic_flight_takeoff_white_24dp"
+        android:title="@string/open_huggin"
+        app:showAsAction="ifRoom|withText" />
+</menu>

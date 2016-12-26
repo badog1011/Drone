@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="studio.bachelor.huginn.HuginnActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coordinator_layout">
+
+        <TextureView
+            android:id="@+id/video_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:id="@+id/stateOfDroneLayout"
+        android:background="@color/colorHalfAlphaWhite"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/toolBoxLinearLayout">
+
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:text="Drone"/>
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/compass_for_orientation"
+            android:id="@+id/imageView2" />
+
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneCompassState"
+            android:textSize="12dp"
+            android:text="null"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/obtuse_angle_of_135_degrees" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneGimbalPitchState"
+            android:textSize="12dp"
+            android:text=" null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:text=" GPS "/>
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneGpsLevel"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:textSize="12sp"
+            android:text="0 顆"/>
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneGpsLatitudeState"
+            android:textSize="12sp"
+            android:text=" null"/>
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneGpsLongitudeState"
+            android:textSize="12sp"
+            android:text=" null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="1dp"
+            android:textSize="12sp"
+            android:text=" H: "/>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneAltitudeState"
+            android:textSize="12sp"
+            android:text=" null"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_battery_std_black_48dp" />
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneBatteryState"
+            android:textSize="12sp"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:id="@+id/stateOfPhoneLayout"
+        android:background="#88FF8800"
+        android:layout_below="@id/stateOfDroneLayout"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/toolBoxLinearLayout">
+
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:text="Phone"/>
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/compass_for_orientation"
+            android:id="@+id/imageView3" />
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_PhoneCompassState"
+            android:textSize="12sp"
+            android:text="null"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/obtuse_angle_of_135_degrees" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_PhoneGradientState"
+            android:textSize="12sp"
+            android:text=" null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:text=" GPS "/>
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_PhoneGpsLevel"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:textSize="12sp"
+            android:text=""/>
+
+        <ProgressBar
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/phoneGpsProgressBar"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="1dp"
+            android:id="@+id/txt_PhoneGpsLatitudeState"
+            android:textSize="12sp"
+            android:text="定位中..."/>
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_PhoneGpsLongitudeState"
+            android:textSize="12sp"
+            android:text=" null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="1dp"
+            android:textSize="12sp"
+            android:text=" H: "/>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_PhoneAltitudeState"
+            android:textSize="12sp"
+            android:text=" 1 m"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/toolBoxLinearLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <Button
+            style="@style/DroneButtonForXhdpi"
+            android:text="@string/button_ready"
+            android:id="@+id/button_ready" />
+
+        <Button
+            style="@style/DroneButtonForXhdpi"
+            android:text="@string/button_air"
+            android:id="@+id/button_take_off"/>
+
+        <Button
+            style="@style/DroneButtonForXhdpi"
+            android:text="@string/button_shoot"
+            android:id="@+id/button_shoot" />
+
+        <Button
+            style="@style/DroneButtonForXhdpi"
+            android:text="@string/button_panorama"
+            android:id="@+id/button_panorama" />
+
+        <Button
+            style="@style/DroneButtonForXhdpi"
+            android:text="@string/button_orbit"
+            android:id="@+id/button_orbit" />
+
+        <Button
+            style="@style/DroneButtonForXhdpi"
+            android:text="@string/button_gallery"
+            android:id="@+id/button_gallery" />
+
+        <Button
+            style="@style/DroneButtonForXhdpi"
+            android:text="@string/button_setting"
+            android:id="@+id/button_setting" />
+
+        <Button
+            style="@style/DroneButtonForXhdpi"
+            android:text="@string/button_anchor"
+            android:id="@+id/button_anchor" />
+
+        <ToggleButton
+            style="@style/DroneButtonForXhdpi"
+            android:id="@+id/togBtn_way_point"
+            android:textOff="定點"
+            android:textOn="結束定點" />
+
+        <ToggleButton
+            style="@style/DroneButtonForXhdpi"
+            android:id="@+id/togBtn_fellowMe"
+            android:textOff="跟隨"
+            android:textOn="結束跟隨" />
+
+    </LinearLayout>
+
+    <studio.bachelor.huginn.utils.OnScreenJoystick
+        android:id="@+id/directionJoystickLeft"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@mipmap/joystick_bg"/>
+
+    <studio.bachelor.huginn.utils.OnScreenJoystick
+        android:id="@+id/directionJoystickRight"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_toStartOf="@id/toolBoxLinearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/joystick_bg"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignStart="@+id/directionJoystickRight"
+        android:layout_alignTop="@+id/seekBarVerAltitude"
+        android:layout_alignBottom="@+id/seekBarVerAltitude"
+        android:layout_toStartOf="@+id/toolBoxLinearLayout">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="32dp"
+            android:text="1"
+            android:id="@+id/btnone" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="74dp"
+            android:layout_height="34dp"
+            android:text="2"
+            android:id="@+id/btntwo" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="32dp"
+            android:text="3"
+            android:id="@+id/btnthree" />
+
+        <Button
+            android:layout_width="71dp"
+            android:layout_height="36dp"
+            android:text="4"
+            android:id="@+id/btnfour" />
+
+        <Button
+            android:layout_width="75dp"
+            android:layout_height="32dp"
+            android:text="5"
+            android:id="@+id/btnfive"
+            android:layout_weight="0.12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/simulatorLayout"
+        android:layout_below="@+id/stateOfPhoneLayout"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="啟動虛擬搖桿"
+            android:id="@+id/btn_enable_virtual_stick"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textSize="14sp"/>
+
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="關閉虛擬搖桿"
+            android:id="@+id/btn_disable_virtual_stick"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/toolBoxLinearLayout"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simulator is off."
+            android:textSize="20dp"
+            android:id="@+id/textview_simulator"
+            android:layout_centerHorizontal="true"
+            android:background="#42c01c"
+            android:visibility="gone"/>
+
+        <ToggleButton
+            android:id="@+id/togBtn_start_simulator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Start Simulator"
+            android:textOn="Stop Simulator"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <studio.bachelor.huginn.utils.VerticalSeekBar
+        android:id="@+id/seekBarVerAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="1m"
+        android:id="@+id/textViewSeekBarAltitude"
+        android:layout_above="@+id/seekBarVerAltitude"
+        android:layout_alignStart="@+id/seekBarVerAltitude"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/tracking_bg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/tracking_send_rect_iv"
+            android:layout_width="150dp"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/visual_track_target_bg"
+            android:visibility="invisible"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/tracking_rst_rect_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/visual_track_weak"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/tracking_stop_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="100dp"
+            android:background="#00000000"
+            android:visibility="invisible"
+            android:src="@drawable/mission_stop" />
+
+        <Button
+            android:id="@+id/tracking_confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#5500ff00"
+            android:visibility="invisible"
+            android:text="OK"
+            android:layout_above="@+id/tracking_stop_btn"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/tracking_backward_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="飛機後退功能"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="130dp" />
+
+        <Switch
+            android:id="@+id/tracking_pull_back_sw"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text=""
+            android:layout_alignLeft="@id/tracking_backward_tv"
+            android:layout_below="@id/tracking_backward_tv"/>
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout"
+            android:paddingBottom="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/tracking_send_rect_iv">
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Left"
+                android:id="@+id/btn_gimbal_left"
+                android:layout_below="@+id/btn_gimbal_up"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Up"
+                android:id="@+id/btn_gimbal_up"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Right"
+                android:id="@+id/btn_gimbal_right"
+                android:layout_alignTop="@+id/btn_gimbal_left"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Down"
+                android:id="@+id/btn_gimbal_down"
+                android:layout_below="@+id/btn_gimbal_left"
+                android:layout_alignStart="@+id/btn_gimbal_up" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="qwrqrewrtehg"
+            android:id="@+id/ShutterSpeed"
+            android:textSize="20dp"
+            android:layout_below="@+id/tracking_rst_rect_iv"
+            android:layout_toEndOf="@+id/tracking_send_rect_iv" />
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

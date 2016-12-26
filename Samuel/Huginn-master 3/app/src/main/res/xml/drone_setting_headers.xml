@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header android:fragment="studio.bachelor.huginn.DroneSettingActivity$CameraSettings"
+        android:title="相機設定"
+        android:summary="相機參數設定" />
+
+    <header android:fragment="studio.bachelor.huginn.DroneSettingActivity$FlightControlSettings"
+        android:title="飛控設定"
+        android:summary="飛控參數設定" />
+
+    <!--<header android:fragment="studio.bachelor.huginn.DroneSettingActivity$ServerSettings"
+        android:title="伺服器設定"
+        android:summary="變更欲上傳伺服器設定" /> -->
+</preference-headers>

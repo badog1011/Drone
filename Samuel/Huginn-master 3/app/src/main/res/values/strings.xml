@@ -1,0 +1,232 @@
+<resources>
+    <string name="app_name">Huginn</string>
+    <!-- Widgets -->
+    <string name="button_ready">預備</string>
+    <string name="button_air">起飛</string>
+    <string name="button_shoot">拍攝</string>
+    <string name="button_birdview">俯拍</string>
+    <string name="button_panorama">全景錄影</string>
+    <string name="button_orbit">環繞錄影</string>
+    <string name="button_anchor">指向</string>
+    <string name="button_freefly">FreeFly</string>
+    <string name="button_gallery">影像傳輸</string>
+    <string name="button_download">下載</string>
+    <string name="button_setting">設定</string>
+
+    <!-- Application Notice-->
+    <string name="notice_drone_is_not_available">功能無法使用，請確定與飛行器之連線或設備</string>
+
+    <string name="notice_camera_is_not_available">相機無法使用，請確定與飛行器之連線或設備</string>
+    <string name="notice_camera_shot">相機攝影完成</string>
+    <string name="notice_camera_shot_failure">相機攝影失敗</string>
+
+    <string name="notice_panorama_is_not_available">功能無法使用，請確定與飛行器之連線或設備</string>
+    <string name="notice_panorama_start">環景錄影開始</string>
+    <string name="notice_panorama_end">環景錄影完成</string>
+    <string name="notice_panorama_failure">環景錄影失敗</string>
+
+    <string name="notice_orbit_is_not_available">功能無法使用，請確定與飛行器之連線或設備</string>
+    <string name="notice_orbit_start">環繞錄影開始</string>
+    <string name="notice_orbit_end">環繞錄影完成</string>
+    <string name="notice_orbit_failure">環繞錄影失敗</string>
+
+
+    <string name="notice_anchor_is_not_available">功能無法使用，請確定與飛行器之連線或設備</string>
+    <string name="notice_anchor_start">飛行定點開始</string>
+    <string name="notice_anchor_end">飛行定點抵達</string>
+    <string name="notice_anchor_failure">飛行定點失敗</string>
+    <string name="notice_anchor_cancel">飛行定點取消</string>
+    <string name="notice_anchor_cancel_fail">飛行定點取消失敗</string>
+
+    <string name="notice_fellowMe_is_not_available">功能無法使用，請確定與飛行器之連線或設備</string>
+    <string name="notice_fellowMe_start">跟隨功能開始</string>
+    <string name="notice_fellowMe_end">飛行定點抵達</string>
+    <string name="notice_fellowMe_failure">跟隨功能失敗</string>
+    <string name="notice_fellowMe_cancel">跟隨功能取消</string>
+    <string name="notice_fellowMe_cancel_fail">跟隨功能取消失敗</string>
+
+    <string name="notice_download_completed">下載成功</string>
+
+    <string name="notice_setting">設定成功</string>
+    <string name="notice_setting_failure">設定失敗</string>
+
+    <string-array name="metering_str">
+        <item>平均</item>
+        <item>中央</item>
+        <item>點</item>
+    </string-array>
+    <string-array name="metering">
+        <item>Average</item>
+        <item>Center</item>
+        <item>Spot</item>
+    </string-array>
+
+    <string-array name="white_balance_str">
+        <item>自動</item>
+        <item>陰天</item>
+        <item>室內日光燈光</item>
+        <item>室內白熱燈光</item>
+        <item>晴天</item>
+        <item>水面</item>
+    </string-array>
+    <string-array name="white_balance">
+        <item>Auto</item>
+        <item>Cloudy</item>
+        <item>IndoorFluorescent</item>
+        <item>IndoorIncandescent</item>
+        <item>Sunny</item>
+        <item>WaterSuface</item>
+    </string-array>
+
+    <string-array name="contrast_str">
+        <item>強烈</item>
+        <item>柔和</item>
+        <item>標準</item>
+    </string-array>
+    <string-array name="contrast">
+        <item>Hard</item>
+        <item>Soft</item>
+        <item>Standard</item>
+    </string-array>
+
+    <string-array name="sharpness_str">
+        <item>強烈</item>
+        <item>柔和</item>
+        <item>標準</item>
+    </string-array>
+    <string-array name="sharpness">
+        <item>Hard</item>
+        <item>Soft</item>
+        <item>Standard</item>
+    </string-array>
+
+    <string-array name="aspect_ratio_str">
+        <item>16:9</item>
+        <item>4:3</item>
+    </string-array>
+    <string-array name="aspect_ratio">
+        <item>16:9</item>
+        <item>4:3</item>
+    </string-array>
+
+    <string-array name="iso_str">
+        <item>Auto</item>
+        <item>100</item>
+        <item>200</item>
+        <item>400</item>
+        <item>800</item>
+        <item>1600</item>
+        <item>3200</item>
+        <item>6400</item>
+        <item>12800</item>
+        <item>25600</item>
+    </string-array>
+    <string-array name="iso">
+        <item>Auto</item>
+        <item>100</item>
+        <item>200</item>
+        <item>400</item>
+        <item>800</item>
+        <item>1600</item>
+        <item>3200</item>
+        <item>6400</item>
+        <item>12800</item>
+        <item>25600</item>
+    </string-array>
+
+    <string-array name="throttle_max_speed_str">
+        <item>1 m/s</item>
+        <item>2 m/s</item>
+        <item>3 m/s</item>
+        <item>4 m/s</item>
+        <item>5 m/s</item>
+    </string-array>
+
+    <string-array name="throttle_max_speed_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="pitch_roll_max_speed_str">
+        <item>1 m/s</item>
+        <item>2 m/s</item>
+        <item>3 m/s</item>
+        <item>4 m/s</item>
+        <item>5 m/s</item>
+    </string-array>
+
+    <string-array name="pitch_roll_max_speed_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="fileformat_str">
+        <item>MP4</item>
+        <item>MOV</item>
+
+    </string-array>
+    <string-array name="fileformat">
+        <item>MP4</item>
+        <item>MOV</item>
+
+    </string-array>
+
+    <string-array name="FramerateAndResolution_str">
+        <item>1280x720_60fps</item>
+        <item>1280x720_48fps</item>
+        <item>1280x720_30fps</item>
+        <item>1280x720_24fps</item>
+        <item>1920x1080_48fps</item>
+        <item>1920x1080_30fps</item>
+        <item>1920x1080_24fps</item>
+        <item>2720x1530_30fps</item>
+        <item>2720x1530_24fps</item>
+        <item>3840x2160_30fps</item>
+        <item>3840x2160_24fps</item>
+        <item>4096x2160_24fps</item>
+    </string-array>
+    <string-array name="FramerateAndResolution">
+        <item>1280x720_60fps</item>
+        <item>1280x720_48fps</item>
+        <item>1280x720_30fps</item>
+        <item>1280x720_24fps</item>
+        <item>1920x1080_48fps</item>
+        <item>1920x1080_30fps</item>
+        <item>1920x1080_24fps</item>
+        <item>2720x1530_30fps</item>
+        <item>2720x1530_24fps</item>
+        <item>3840x2160_30fps</item>
+        <item>3840x2160_24fps</item>
+        <item>4096x2160_24fps</item>
+    </string-array>
+
+
+
+    <!-- Wifi -->
+    <string name="enable_p2p_button">P2P On/Off</string>
+    <string name="discover_peers_button">Discover</string>
+    <string name="be_server">RC連線主機</string>
+    <string name="open_simulator">DRONE SIMULATOR</string>
+    <string name="open_huggin">HUGINN</string>
+    <string name="connect_as_client">手持手機</string>
+    <string name="connect_peer_button">Connect</string>
+    <string name="disconnect_peer_button">Disconnect</string>
+    <string name="get_file_button">Launch Gallery</string>
+    <string name="send_msg">Send</string>
+    <string name="send_udp_msg">UDP</string>
+    <string name="empty"></string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="client_text">This device will act as a client. Click on Gallery button to pick a local(stored) file</string>
+    <string name="empty_message">No devices found. Turn on P2P and perform discovery from the Action Bar</string>
+    <string name="p2p_off_warning">Enable P2P from action bar button above or system settings</string>
+    <string name="group_owner_text">"Am I the Group Owner? "</string>
+    <string name="label_me">ME</string>
+    <string name="label_peers">PEERS</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="虛擬遙控速度設定">
+        <ListPreference
+            android:key="throttle_max_speed_setting"
+            android:title="垂直最大飛行速度設定"
+            android:entries="@array/throttle_max_speed_str"
+            android:entryValues="@array/throttle_max_speed_value"
+            android:dialogTitle="選擇最大飛垂直飛行速度"
+            android:defaultValue="1"
+            android:summary="選擇最大垂直移動速度"
+            />
+
+        <ListPreference
+            android:key="pitch_roll_max_speed_setting"
+            android:title="水平最大飛行速度設定"
+            android:entries="@array/pitch_roll_max_speed_str"
+            android:entryValues="@array/pitch_roll_max_speed_value"
+            android:dialogTitle="選擇最大水平垂直飛行速度"
+            android:defaultValue="2"
+            android:summary="選擇最大水平移動速度"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="飛行限制">
+        <EditTextPreference
+            android:key="limit_radius"
+            android:title="飛行半徑距離限制"
+            android:summary="請輸入最遠飛行半徑距離[15, 500]公尺"
+            android:defaultValue="15"
+            />
+        <EditTextPreference
+            android:key="limit_altitude"
+            android:title="飛行高度限制"
+            android:summary="請輸入最高飛行高度[20, 500]公尺"
+            android:defaultValue="20"
+            />
+
+
+    </PreferenceCategory>
+</PreferenceScreen>

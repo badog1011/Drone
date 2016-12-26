@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".WifiModule.CMDActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/img_touch_for_freeMode"
+        android:src="@drawable/ic_touch_app_black_48dp"
+        android:visibility="invisible"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <TextureView
+        android:id="@+id/video_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/colorWhite"
+        android:layout_gravity="center|left" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:id="@+id/stateOfDroneLayout"
+        android:background="@color/colorHalfAlphaWhite"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/compass_for_orientation" />
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneCompassState"
+            android:textSize="12dp"
+            android:text="null"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/obtuse_angle_of_135_degrees" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneGimbalPitchState"
+            android:textSize="12dp"
+            android:text=" 0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="12dp"
+            android:text=" GPS "/>
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneGpsLevel"
+            android:textSize="12dp"
+            android:text=""/>
+
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="1dp"
+            android:id="@+id/txt_DroneGpsLatitudeState"
+            android:textSize="12dp"
+            android:text=" null"/>
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneGpsLongitudeState"
+            android:textSize="12dp"
+            android:text=" null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="3dp"
+            android:textSize="12dp"
+            android:text=" H:"/>
+
+        <TextView
+            android:layout_width="26dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneAltitudeState"
+            android:textSize="12dp"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:id="@+id/stateOfPhoneLayout"
+        android:background="#88FF8800"
+        android:layout_below="@id/stateOfDroneLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/compass_for_orientation"
+            android:id="@+id/imageView3" />
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_PhoneCompassState"
+            android:textSize="12sp"
+            android:text="null"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/obtuse_angle_of_135_degrees" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_PhoneGradientState"
+            android:textSize="12dp"
+            android:text=" null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:text=" GPS "/>
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_PhoneGpsLevel"
+            android:textSize="12sp"
+            android:text=""/>
+
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/phoneGpsProgressBar"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="1dp"
+            android:id="@+id/txt_PhoneGpsLatitudeState"
+            android:textSize="12dp"
+            android:text="定位中..."/>
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_PhoneGpsLongitudeState"
+            android:textSize="12dp"
+            android:text=" null"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_battery_std_black_48dp" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:id="@+id/txt_DroneBatteryState"
+            android:textSize="12dp"
+            android:text=""/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/toolBoxLinearLayout"
+        android:layout_alignTop="@+id/simulatorLayout"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="@string/button_ready"
+            android:id="@+id/button_ready"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="@string/button_air"
+            android:id="@+id/button_take_off"/>
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="@string/button_shoot"
+            android:id="@+id/button_shoot" />
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="@string/button_panorama"
+            android:id="@+id/button_panorama" />
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="@string/button_orbit"
+            android:id="@+id/button_orbit" />
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="跟隨"
+            android:id="@+id/button_fellowMe" />
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="定點拍"
+            android:id="@+id/button_way_point" />
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="@string/button_anchor"
+            android:id="@+id/button_anchor" />
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="@string/button_freefly"
+            android:textSize="12dp"
+            android:id="@+id/button_freefly" />
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="@string/button_gallery"
+            android:visibility="gone"
+            android:id="@+id/button_gallery" />
+
+        <Button
+            style="@style/DroneButtonForCMD"
+            android:text="@string/button_setting"
+            android:visibility="gone"
+            android:id="@+id/button_setting" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/simulatorLayout"
+        android:layout_below="@id/stateOfPhoneLayout"
+        android:layout_alignParentStart="true">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="啟動虛擬搖桿"
+        android:id="@+id/btn_enable_virtual_stick"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消虛擬搖桿"
+        android:id="@+id/btn_disable_virtual_stick" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:layout_above="@+id/directionJoystickLeft"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Left"
+            android:id="@+id/btn_gimbal_left"
+            android:layout_below="@+id/btn_gimbal_up"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Up"
+            android:id="@+id/btn_gimbal_up"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Right"
+            android:id="@+id/btn_gimbal_right"
+            android:layout_alignTop="@+id/btn_gimbal_left"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Down"
+            android:id="@+id/btn_gimbal_down"
+            android:layout_below="@+id/btn_gimbal_left"
+            android:layout_alignStart="@+id/btn_gimbal_up" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/simulatorLayout"
+        android:layout_alignStart="@+id/directionJoystickLeft">
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/imgDownloadProgressBar"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgDownloadState"
+        android:layout_centerInParent="true"
+        android:textSize="32dp"
+        android:text="下載中..."
+        android:layout_below="@id/imgDownloadProgressBar"
+        android:visibility="invisible"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:id="@+id/buttonCancelDownloadPic"
+        android:layout_below="@id/imgDownloadState"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonCatchPic"
+        android:src="@drawable/landscape64"
+        android:paddingStart="5dp"
+        android:background="#00000000"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"/>
+
+    <studio.bachelor.huginn.utils.OnScreenJoystick
+        android:id="@+id/directionJoystickLeft"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@mipmap/joystick_bg"/>
+
+    <studio.bachelor.huginn.utils.OnScreenJoystick
+        android:id="@+id/directionJoystickRight"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/joystick_bg"/>
+
+    <studio.bachelor.huginn.utils.VerticalSeekBar
+        android:id="@+id/seekBarVerAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="1m"
+        android:id="@+id/textViewSeekBarAltitude"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignStart="@+id/seekBarVerAltitude"
+        android:layout_marginTop="21dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MSG: "
+        android:id="@+id/txt_error_msg"
+        android:background="#FFFF0000"
+        android:textSize="16dp"
+        android:layout_below="@id/simulatorLayout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Commmand"
+        android:id="@+id/cmd_text"
+        android:textSize="16dp"
+        android:layout_below="@id/txt_error_msg"
+        android:layout_alignStart="@id/txt_error_msg" />
+
+</RelativeLayout>
+
+

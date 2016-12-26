@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="aspect_ratio_setting"
+        android:title="相片比例設定"
+        android:entries="@array/aspect_ratio_str"
+        android:entryValues="@array/aspect_ratio"
+        android:dialogTitle="選擇相片比例"
+        android:defaultValue="16:9"
+        android:summary="選擇相片比例"
+        />
+
+    <ListPreference
+        android:key="metering_mode_setting"
+        android:title="測光模式設定"
+        android:entries="@array/metering_str"
+        android:entryValues="@array/metering"
+        android:dialogTitle="選擇測光模式"
+        android:defaultValue="Average"
+        android:summary="選擇測光模式"
+        />
+
+    <ListPreference
+        android:key="white_balance_mode_setting"
+        android:title="白平衡模式設定"
+        android:entries="@array/white_balance_str"
+        android:entryValues="@array/white_balance"
+        android:dialogTitle="選擇白平衡模式"
+        android:defaultValue="Auto"
+        android:summary="選擇白平衡模式"
+        />
+
+    <ListPreference
+        android:key="contrast_setting"
+        android:title="對比模式設定"
+        android:entries="@array/contrast_str"
+        android:entryValues="@array/contrast"
+        android:dialogTitle="選擇對比模式"
+        android:defaultValue="Standard"
+        android:summary="選擇對比模式"
+        />
+
+    <ListPreference
+        android:key="sharpness_setting"
+        android:title="尖銳度設定"
+        android:entries="@array/sharpness_str"
+        android:entryValues="@array/sharpness"
+        android:dialogTitle="選擇尖銳度"
+        android:defaultValue="Standard"
+        android:summary="選擇尖銳度"
+        />
+
+    <ListPreference
+        android:defaultValue="1"
+        android:title="影片存檔格式"
+        android:entries="@array/fileformat_str"
+        android:entryValues="@array/fileformat"
+        android:key="record_fileformat" />
+    <ListPreference
+        android:defaultValue="Standard"
+        android:title="影片畫質設定"
+        android:entries="@array/FramerateAndResolution_str"
+        android:entryValues="@array/FramerateAndResolution"
+        android:key="record_FramerateAndResolution"
+        android:summary="選擇畫素與幀率" />
+
+    <!--<ListPreference
+        android:key="iso_setting"
+        android:title="ISO設定"
+        android:entries="@array/iso_str"
+        android:entryValues="@array/iso"
+        android:dialogTitle="選擇ISO數值"
+        android:defaultValue="Auto"
+        android:summary="設定ISO數值"
+        />
+    -->
+</PreferenceScreen>
